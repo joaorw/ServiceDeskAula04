@@ -19,11 +19,9 @@ import br.usjt.sdesk.model.service.FilaService;
 
 /**
  * 
- * @author Jo�o Victor Bonfim Rocha 816118224 
+ * @author João Victor Bonfim Rocha 816118224 
  *
  */
-
-//Implementar passo 3 e 4
 
 @Transactional
 @Controller
@@ -52,7 +50,7 @@ public class ManterChamadosController {
 	
 	/**
 	 * 
-	 * @param model Acesso à request http
+	 * @param model Acesso Ã  request http
 	 * @return JSP de Listar Chamados
 	 */
 	@RequestMapping("/listar_filas_exibir")
@@ -78,7 +76,7 @@ public class ManterChamadosController {
 			fila = filaService.carregar(fila.getId());
 			model.addAttribute("fila", fila);
 
-			// TODO C�digo para carregar os chamados
+			// TODO Código para carregar os chamados
 			List<Chamado> chamados = chamadoService.listarChamados(fila);
 			model.addAttribute("chamados", chamados);
 			
